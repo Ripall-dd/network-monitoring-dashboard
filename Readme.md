@@ -9,7 +9,7 @@ Aplikasi berjalan berbasis **Flask + Socket.IO** (Python) untuk memberikan updat
 
 ---
 
-# 🚀 1. Fitur Utama
+# 1. Fitur Utama
 
 ### ✔ Monitoring Realtime (WebSocket)
 - Status device (online/offline) diperbarui setiap 2 detik.
@@ -31,7 +31,7 @@ Aplikasi berjalan berbasis **Flask + Socket.IO** (Python) untuk memberikan updat
 
 ---
 
-# 📁 2. Struktur Folder
+# 2. Struktur Folder
 
 ```
 network-monitoring/
@@ -57,7 +57,7 @@ network-monitoring/
 
 ---
 
-# 🛠 3. Instalasi
+# 3. Instalasi
 
 Pastikan Python 3 sudah terinstall.
 
@@ -76,7 +76,7 @@ pip install flask flask-socketio eventlet
 
 ---
 
-# ▶ 4. Cara Menjalankan Aplikasi
+# 4. Cara Menjalankan Aplikasi
 
 Di terminal:
 
@@ -94,7 +94,7 @@ Buka browser untuk melihat dashboard realtime.
 
 ---
 
-# 🌐 5. Endpoint REST API
+# 5. Endpoint REST API
 
 ### **GET /api/history**
 Mengembalikan riwayat status perangkat dalam format JSON.
@@ -116,7 +116,7 @@ Contoh:
 
 ---
 
-# 📸 6. Screenshot Realtime
+# 6. Screenshot Realtime
 
 ### 1. Dashboard Saat Pertama Dibuka
 ![Dashboard](static/img/dashboard.png)
@@ -129,7 +129,7 @@ Contoh:
 
 ---
 
-# 🧩 7. Penjelasan Arsitektur Aplikasi
+# 7. Penjelasan Arsitektur Aplikasi
 
 Aplikasi menggunakan arsitektur **Client–Server dengan kombinasi REST API dan WebSocket**.
 
@@ -152,7 +152,7 @@ Tiga perangkat disimulasikan dalam file `devices.py`:
 
 ---
 
-# 🏗 8. Diagram Arsitektur
+# 8. Diagram Arsitektur
 
 ```
                 ┌────────────────────┐
@@ -183,7 +183,7 @@ Tiga perangkat disimulasikan dalam file `devices.py`:
 
 ---
 
-# 🎯 9. Kesimpulan
+# 9. Kesimpulan
 
 Kriteria tugas:
 
@@ -196,12 +196,13 @@ Kriteria tugas:
 
 ---
 
-# ✒ 10. Identitas
+# 10. Identitas
 
 Nama: Rifaldi Ahmad Rehan
 NIM: 241091900397
 Kelas: 03SKMM003
 
 ---
+
 
 
