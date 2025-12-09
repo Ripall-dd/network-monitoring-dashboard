@@ -34,7 +34,7 @@ Aplikasi berjalan berbasis **Flask + Socket.IO** (Python) untuk memberikan updat
 # 2. Struktur Folder
 
 ```
-network-monitoring/
+network-monitoring-dashboard/
 │
 ├── app.py
 ├── devices.py
@@ -203,6 +203,7 @@ NIM: 241091900397
 Kelas: 03SKMM003
 
 ---
+
 
 
 
