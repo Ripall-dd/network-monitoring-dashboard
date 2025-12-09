@@ -1,34 +1,25 @@
+# 📡 Network Monitoring Dashboard (Real Device)
 
-# 📡 Network Monitoring Dashboard  
 Tugas Mata Kuliah: **Komunikasi Data**  
 Nama: **Rifaldi Ahmad Rehan**
 NIM: **241091900397**
 
-Aplikasi ini adalah sistem **Web Monitoring Jaringan secara real-time** untuk menganalisis status perangkat jaringan. Data diambil melalui **simulasi perangkat** yang mewakili metode ICMP/SNMP.
+Aplikasi monitoring jaringan real-time menggunakan **Flask + Socket.IO** dengan data yang diambil dari **perangkat nyata**:
 
-Aplikasi berjalan berbasis **Flask + Socket.IO** (Python) untuk memberikan update real-time melalui WebSocket, serta REST API untuk mengambil data historis.
+- **Router WiFi** → ICMP Ping  
+- **HP Android** → ICMP Ping  
+- **Laptop** → Bandwidth asli via psutil  
+
+Dashboard menampilkan status perangkat, grafik bandwidth, dan log aktivitas yang diperbarui otomatis setiap **2 detik**.
 
 ---
 
-# 1. Fitur Utama
+## 🚀 Fitur Utama
 
-### ✔ Monitoring Realtime (WebSocket)
-- Status device (online/offline) diperbarui setiap 2 detik.
-- Bandwidth tiap perangkat berubah secara real-time.
-- Log aktivitas otomatis ditampilkan.
-
-### ✔ Tiga Perangkat Jaringan (Disimulasikan)
-- Router A  
-- Switch B  
-- Server C  
-
-### ✔ REST API
-- Endpoint untuk mengambil data historis perangkat dalam format JSON.
-
-### ✔ Dashboard UI
-- Menggunakan TailwindCSS
-- Grafik bandwidth real-time dengan Chart.js
-- Tabel status dinamis
+- Monitoring real-time (WebSocket)
+- Status online/offline perangkat real
+- Bandwidth asli dari laptop
+- Log aktivitas otomatis
 
 ---
 
