@@ -1,7 +1,7 @@
 # 📡 Network Monitoring Dashboard (Real Device)
 
 Tugas Mata Kuliah: **Komunikasi Data**  
-Nama: **Rifaldi Ahmad Rehan**
+Nama: **Rifaldi Ahmad Rehan** |
 NIM: **241091900397**
 
 Aplikasi monitoring jaringan real-time menggunakan **Flask + Socket.IO** dengan data yang diambil dari **perangkat nyata**:
@@ -14,7 +14,7 @@ Dashboard menampilkan status perangkat, grafik bandwidth, dan log aktivitas yang
 
 ---
 
-## 🚀 Fitur Utama
+## Fitur Utama
 
 - Monitoring real-time (WebSocket)
 - Status online/offline perangkat real
@@ -23,7 +23,7 @@ Dashboard menampilkan status perangkat, grafik bandwidth, dan log aktivitas yang
 
 ---
 
-# 2. Struktur Folder
+## Struktur Folder
 
 ```
 network-monitoring-dashboard/
@@ -49,7 +49,7 @@ network-monitoring-dashboard/
 
 ---
 
-# 3. Instalasi
+## Instalasi
 
 Pastikan Python 3 sudah terinstall.
 
@@ -63,12 +63,12 @@ pip install -r requirements.txt
 Atau manual:
 
 ```
-pip install flask flask-socketio eventlet
+pip install flask flask-socketio eventlet psutil
 ```
 
 ---
 
-# 4. Cara Menjalankan Aplikasi
+## Cara Menjalankan Aplikasi
 
 Di terminal:
 
@@ -86,7 +86,7 @@ Buka browser untuk melihat dashboard realtime.
 
 ---
 
-# 5. Endpoint REST API
+## Endpoint REST API
 
 ### **GET /api/history**
 Mengembalikan riwayat status perangkat dalam format JSON.
@@ -98,9 +98,9 @@ Contoh:
   {
     "time": "2025-12-04T19:20:54",
     "data": [
-      {"name": "Router A", "status": "online", "bandwidth": 12},
-      {"name": "Switch B", "status": "offline", "bandwidth": 0},
-      {"name": "Server C", "status": "online", "bandwidth": 25}
+      {"name": "Router WiFi", "IP Address": "192.168.100.1", "status": "online", "bandwidth": 12},
+      {"name": "HP Android", "IP Address": "192.168.100.32", "status": "offline", "bandwidth": 0},
+      {"name": "Laptop Saya", "IP Address": "192.168.100.33", "status": "online", "bandwidth": 25}
     ]
   }
 ]
@@ -108,7 +108,7 @@ Contoh:
 
 ---
 
-# 6. Screenshot Realtime
+## Screenshot Realtime
 
 ### 1. Dashboard Saat Pertama Dibuka
 ![Dashboard](static/img/dashboard.png)
@@ -121,30 +121,20 @@ Contoh:
 
 ---
 
-# 7. Penjelasan Arsitektur Aplikasi
+## Penjelasan Arsitektur Aplikasi
 
 Aplikasi menggunakan arsitektur **Client–Server dengan kombinasi REST API dan WebSocket**.
 
-### **🔹 Frontend:**
-- HTML (Jinja2 Flask Template)
-- TailwindCSS (UI)
-- Chart.js (grafik realtime)
-- Socket.IO Client (menerima data realtime)
-
-### **🔹 Backend (Flask + SocketIO):**
-- Mengirim data device secara realtime setiap 2 detik
-- Menyediakan endpoint REST API
-- Background task berjalan sebagai “data generator”
-
-### **🔹 Simulasi perangkat:**
-Tiga perangkat disimulasikan dalam file `devices.py`:
-- status online/offline
-- bandwidth random  
-- penyimpanan data history
+- Frontend: HTML + Tailwind + Chart.js + Socket.IO Client  
+- Backend: Flask + Socket.IO  
+- Background task mengumpulkan:
+  - Ping Router
+  - Ping HP
+  - Bandwidth laptop  
 
 ---
 
-# 8. Diagram Arsitektur
+## Diagram Arsitektur
 
 ```
                 ┌────────────────────┐
@@ -160,38 +150,25 @@ Tiga perangkat disimulasikan dalam file `devices.py`:
                 ┌──────────▼─────────┐
                 │     Flask Server    │
                 │   (app.py)          │
-                │  - SocketIO Event   │
-                │  - API Endpoint     │
+                │  - SocketIO, bg task│
+                │  - Rest API         │
                 └──────────┬─────────┘
                            │
                            ▼
                 ┌────────────────────┐
                 │    devices.py       │
-                │  Simulasi perangkat │
-                │  - Status           │
-                │  - Bandwidth        │
+                │  - Ping Router      │
+                │  - Ping HP Android  │
+                │  - Bandwidth Laptop │
                 └────────────────────┘
 ```
 
 ---
 
-# 9. Kesimpulan
+## Identitas
 
-Kriteria tugas:
-
-✔ 3 perangkat jaringan  
-✔ Data realtime (WebSocket)  
-✔ REST API  
-✔ UI dashboard modern  
-✔ Arsitektur jelas  
-✔ Source code + screenshot + dokumentasi lengkap  
-
----
-
-# 10. Identitas
-
-Nama: Rifaldi Ahmad Rehan
-NIM: 241091900397
+Nama: Rifaldi Ahmad Rehan |
+NIM: 241091900397 |
 Kelas: 03SKMM003
 
 ---
