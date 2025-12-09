@@ -37,9 +37,9 @@ Aplikasi berjalan berbasis **Flask + Socket.IO** (Python) untuk memberikan updat
 network-monitoring-dashboard/
 │
 ├── app.py
-├── devices.py
+├── device.py
 ├── requirements.txt
-├── README.md
+├── Readme.md
 │
 ├── templates/
 │   └── index.html
@@ -203,6 +203,7 @@ NIM: 241091900397
 Kelas: 03SKMM003
 
 ---
+
 
 
 
