@@ -108,19 +108,6 @@ Contoh:
 
 ---
 
-## Screenshot Realtime
-
-### 1. Dashboard Saat Pertama Dibuka
-![Dashboard](static/img/dashboard.png)
-
-### 2. Update Status & Bandwidth (Realtime)
-![Update Tabel](static/img/table_update.png)
-
-### 3. Grafik Bandwidth Bergerak Real-Time
-![Grafik](static/img/chart_update.png)
-
----
-
 ## Penjelasan Arsitektur Aplikasi
 
 Aplikasi menggunakan arsitektur **Client–Server dengan kombinasi REST API dan WebSocket**.
